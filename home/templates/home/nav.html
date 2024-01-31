@@ -1,6 +1,55 @@
-
 {% if request.user.is_active %}
   {% if profile %}
+    <!-- Navigation bar for authenticated users with a profile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><b>Home</b></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Profile</b>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'viewprofile' %}">View Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'editprofile' %}">Edit Profile</a></li>
+              </ul>
+            </li>
+
+            <!-- New "Services" link for authenticated users with a profile -->
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'services' %}"><b>Services</b></a>
+            </li>
+
+            <!-- Contact Us link -->
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'contactus' %}"><b>Contact Us</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'gallery' %}"><b>Gallery</b></a>
+            </li>
+            
+            
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
+            <button id="bs" class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  {% else %}
+    <!-- Navigation bar for authenticated users without a profile -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
@@ -16,15 +65,23 @@
               <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Profile
               </a>
-
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-                <li><a class="dropdown-item" href="{% url 'logout' %}">logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{% url 'viewprofile' %}">View Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{% url 'editprofile' %}">Edit Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'createprofile' %}">Create Profile</a></li>
               </ul>
             </li>
+
+            <!-- New "Services" link for authenticated users without a profile -->
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'services' %}">Services</a>
+            </li>
+
+            <!-- Contact Us link -->
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'contactus' %}">Contact Us</a>
+            </li>
+
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
@@ -33,68 +90,47 @@
         </div>
       </div>
     </nav>
-  {% else %}
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <div class="container-fluid">
-       <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-           </li>
-           <li class="nav-item dropdown">
-             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Profile
-             </a>
-
-             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-               <li><a class="dropdown-item" href="{% url 'logout' %}">logout</a></li>
-               <li><hr class="dropdown-divider"></li>
-               <li><a class="dropdown-item" href="{% url 'createprofile' %}">Create Profile</a></li>
-
-             </ul>
-           </li>
-         </ul>
-         <form class="d-flex">
-           <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
-           <button id="bs" class="btn btn-outline-success" type="submit">Search</button>
-         </form>
-       </div>
-     </div>
-   </nav>
   {% endif %}
 {% else %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profile
-          </a>
+  <!-- Navigation bar for unauthenticated users -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
+              <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+            </ul>
+          </li>
 
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-            <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
-        <button id="bs" class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+          <!-- New "Services" link for unauthenticated users -->
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'services' %}">Services</a>
+          </li>
+
+          <!-- Contact Us link -->
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'contactus' %}">Contact Us</a>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search Recipe" aria-label="Search">
+          <button id="bs" class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 {% endif %}

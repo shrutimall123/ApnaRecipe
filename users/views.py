@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .forms import UserRegistrationForm, CreateProfileForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from .models import Profile
@@ -8,6 +8,8 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.utils.decorators import method_decorator
+from django.http import JsonResponse
+# from .models import Post
 # Create your views here.
 
 class UserHome(TemplateView):
@@ -141,6 +143,19 @@ class EditProfile(TemplateView):
             return redirect('viewprofile')
         else:
             return render(request, self.template_name, self.context)
+    # @require_POST  
+    # def like_post(request, post_id):
+    #     post = get_object_or_404(Post, id=post_id)
+    #     post.likes += 1
+    #     post.save()
+    #     return JsonResponse({'likes': post.likes})
+
+    # @require_POST
+    # def dislike_post(request, post_id):
+    #     post = get_object_or_404(Post, id=post_id)
+    #     post.dislikes += 1
+    #     post.save()
+    #     return JsonResponse({'dislikes': post.dislikes})
 
 
 

@@ -16,3 +16,21 @@ class Home(TemplateView):
         data = recipe.objects.all()
         self.context['data'] = data
         return render(request,self.template_name , self.context)
+    
+    
+def dynamic_home(request):
+        context = {
+        'message': 'Welcome to the dynamic home page!',
+        # Add other dynamic data as needed
+        }
+        return render(request, 'your_app/home.html', context)
+    
+
+def services(request):
+    return render(request, 'home/services.html') 
+
+def contactus(request):
+    return render(request,'home/contactus.html')
+
+def gallery(request):
+     return render(request,'home/gallery.html')

@@ -13,12 +13,25 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'users/css/viewprofile.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(167, 167, 110); /* Set the background color to yellow */
+  background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with your actual image path */
+  background-size: cover; /* Adjust background size as needed */
+  background-position: center; /* Adjust background position as needed */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  font-family: Arial, sans-serif;
+  color: #333; /* Set text color for better visibility on a yellow background */
+}
+    </style>
 
 </head>
 <body>
 <!--navbar-->
 {% include 'home/nav.html' %}
-<img src="{% static 'home/images/bgimg2.jpeg' %}" class="img-fluid" style="background-image">
+<img src="{% static 'home/images/chef.jpeg' %}" class="img-fluid" style="background-image">
 <!--bio-->
 <div class="container">
     <div class="row">
