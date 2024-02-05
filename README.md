@@ -4,6 +4,17 @@
 Welcome to RecipeHub, your go-to platform for discovering and sharing delicious recipes! This README file provides an overview of the features, setup, and usage of our RecipeHub website.
 RecipeHub is a web application built with Django, allowing users to explore, share, and cook a wide range of recipes. Whether you're a professional chef or a home cook, RecipeHub provides a platform for sharing and discovering culinary creations.
 
+## Table of Contents
+- [How to Run](How to Run)
+- Requirements
+- About The Team
+- Team Members
+- Details On User
+- Functionalities
+- Features
+- Usage
+- License
+
 
 
 ## How to Run
@@ -88,9 +99,6 @@ Filter recipes based on cuisine, ingredients, or chef.
 
 4. **Recipe Upload**
 - Chefs can easily upload their recipes, complete with ingredients, step-by-step instructions, and appealing images.
-
-5. **Search and Filters**
-- Effortlessly find recipes based on ingredients, cuisine, or dietary preferences. Our intuitive search and filter options make recipe discovery a breeze.
 
 
 ## Usage
