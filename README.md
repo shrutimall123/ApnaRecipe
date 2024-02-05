@@ -3,13 +3,7 @@
 ## Overview
 Welcome to RecipeHub, your go-to platform for discovering and sharing delicious recipes! This README file provides an overview of the features, setup, and usage of our RecipeHub website.
 
-Table of Contents
-Features
-Installation
-Usage
-Contributing
-Support
-License
+
 ## Features
 1. Recipe Exploration
 Discover a wide range of mouth-watering recipes uploaded by talented chefs. From appetizers to desserts, RecipeHub has it all.
@@ -26,17 +20,9 @@ Chefs can easily upload their recipes, complete with ingredients, step-by-step i
 5. Search and Filters
 Effortlessly find recipes based on ingredients, cuisine, or dietary preferences. Our intuitive search and filter options make recipe discovery a breeze.
 
-Installation
-To set up RecipeHub locally, follow these steps:
 
-Clone the repository: git clone https://github.com/your-username/recipehub.git
-Navigate to the project directory: cd recipehub
-Install dependencies: npm install
-Configure database settings in config.js.
-Run the application: npm start
-Visit http://localhost:3000 in your browser to access RecipeHub.
+## Usage
 
-Usage
 Homepage:
 Browse featured recipes and top chefs on the homepage.
 
