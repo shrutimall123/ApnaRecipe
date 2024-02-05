@@ -71,7 +71,7 @@ Provide details such as ingredients, instructions, and cooking time.
 Chefs have the ability to update or remove their own recipes.
 
 ### For Cooking Enthusiasts:
-Browse Recipes:
+- Browse Recipes:
 Explore a diverse collection of recipes from various chefs.
 Filter recipes based on cuisine, ingredients, or chef.
 
@@ -95,19 +95,19 @@ Effortlessly find recipes based on ingredients, cuisine, or dietary preferences.
 
 ## Usage
 
-Homepage:
+1. Homepage:
 Browse featured recipes and top chefs on the homepage.
 
-Search:
+2. Search:
 Use the search bar and filters to find recipes based on your preferences.
 
-User Account:
+3. User Account:
 Create an account to save favorite recipes and follow chefs.
 
-Recipe Upload:
+4. Recipe Upload:
 Chefs can contribute by uploading their own recipes. Click the "Upload" button on the navigation bar.
 
-Chef Profiles:
+5. Chef Profiles:
 Explore chef profiles to view their recipes and follow them for updates.
 
 ## License
