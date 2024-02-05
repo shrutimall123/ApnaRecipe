@@ -25,13 +25,14 @@ class UserHome(TemplateView):
         if user:
             data = recipe.objects.filter(~Q(created_by=user))
             self.context['data'] = data
+            print(data)
             try:
                 profile = self.get_object(user)
-                self.context['profile'] = 'pro_exist'
+                self.context['profile'] = profile
                 return render(request,self.template_name,self.context)
             except Exception:
                 return render(request,self.template_name, self.context)
-        return redirect('home')
+
 
 
 class UserRegister(TemplateView):
