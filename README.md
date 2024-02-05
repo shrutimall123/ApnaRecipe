@@ -5,15 +5,15 @@ Welcome to RecipeHub, your go-to platform for discovering and sharing delicious 
 RecipeHub is a web application built with Django, allowing users to explore, share, and cook a wide range of recipes. Whether you're a professional chef or a home cook, RecipeHub provides a platform for sharing and discovering culinary creations.
 
 ## Table of Contents
-- [How to Run](How to Run)
-- Requirements
-- About The Team
-- Team Members
-- Details On User
-- Functionalities
-- Features
-- Usage
-- License
+- [How to Run](#How-to-Run)
+- [Requirements](#Requirements)
+- [About The Team](#About-the-Tem)
+- [Team Members](#Team-Members)
+- [Details On User](#Details-on-Users)
+- [Functionalities](#Functionalities)
+- [Features](#Features)
+- [Usage](#Usage)
+- [License](#Usage)
 
 
 
@@ -53,7 +53,7 @@ Make sure you have the following software installed on your machine:
 ## About the Team
 This project was developed by an enthusiastic team of food lovers and tech enthusiasts. We aimed to create a platform where users can explore a variety of recipes shared by talented chefs from around the world.
 
-## Team Members:
+## Team Members
 - Shruti Mall
 
 - Sandeep Kumar
