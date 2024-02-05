@@ -38,3 +38,7 @@ Chefs can contribute by uploading their own recipes. Click the "Upload" button o
 Chef Profiles:
 Explore chef profiles to view their recipes and follow them for updates.
 
+## License
+RecipeHub is licensed under the MIT License. Feel free to use, modify, and distribute this project. Happy cooking!
+
+Thank you for choosing RecipeHub. We hope you enjoy your culinary journey!
