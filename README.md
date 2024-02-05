@@ -35,17 +35,19 @@ To run the RecipeHub website locally on your machine, follow these steps:
 ## Requirements
 Make sure you have the following software installed on your machine:
 
-Python (3.6 or higher)
-Django (3.x)
+- Python (3.6 or higher)
+- Django (3.x)
 
 
 ## About the Team
 This project was developed by an enthusiastic team of food lovers and tech enthusiasts. We aimed to create a platform where users can explore a variety of recipes shared by talented chefs from around the world.
 
 ## Team Members:
-Shruti Mall
-Sandeep Kumar
-Sathvika Teja
+- Shruti Mall
+
+- Sandeep Kumar
+
+- Sathvika Teja
 
 ## Details on Users
 RecipeHub caters to two types of users:
@@ -62,10 +64,10 @@ They can search for recipes based on ingredients, cuisine, or chef.
 ## Functionalities
 
 ### For Chefs:
-Upload Recipes:
+- Upload Recipes:
 Share your culinary creations with the RecipeHub community.
 Provide details such as ingredients, instructions, and cooking time.
-Edit/Delete Recipes:
+- Edit/Delete Recipes:
 Chefs have the ability to update or remove their own recipes.
 
 ### For Cooking Enthusiasts:
