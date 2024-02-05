@@ -7,7 +7,7 @@ RecipeHub is a web application built with Django, allowing users to explore, sha
 ## Table of Contents
 - [How to Run](#How-to-Run)
 - [Requirements](#Requirements)
-- [About The Team](#About-the-Tem)
+- [About The Team](#About-the-Team)
 - [Team Members](#Team-Members)
 - [Details On User](#Details-on-Users)
 - [Functionalities](#Functionalities)
