@@ -105,6 +105,7 @@ Filter recipes based on cuisine, ingredients, or chef.
 
 1. **Homepage:**
 Browse featured recipes and top chefs on the homepage.
+![Featured Recipes](/Users/shrutimall/Desktop/djan/ApnaRecipe/images/homepage.jpeg)
 
 2. **Search:**
 Use the search bar and filters to find recipes based on your preferences.
