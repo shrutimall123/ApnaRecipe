@@ -112,12 +112,16 @@ Use the search bar and filters to find recipes based on your preferences.
 
 3. **User Account:**
 Create an account to save favorite recipes and follow chefs.
+![UsersAccount](images/chef.jpeg)
 
 4. **Recipe Upload:**
 Chefs can contribute by uploading their own recipes. Click the "Upload" button on the navigation bar.
+![UploadRecipe](images/createrecipe.jpeg)
 
 5. **Chef Profiles:**
 Explore chef profiles to view their recipes and follow them for updates.
+![ChefProfile](images/users.jpeg)
+
 
 ## License
 RecipeHub is licensed under the MIT License. Feel free to use, modify, and distribute this project. Happy cooking!
