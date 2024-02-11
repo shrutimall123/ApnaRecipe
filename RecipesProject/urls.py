@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+admin.site.site_header = "RECIPE Admin"
+admin.site.site_title = "INGREDIENTS Portal"
+admin.site.index_title = "Welcome to MY RECIPE Portal"
 
 
 urlpatterns = [
