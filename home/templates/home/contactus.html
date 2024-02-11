@@ -94,7 +94,7 @@
 
   <!-- end Loader -->
 
-  <div class="banner-header banner2"  data-aos="fade-down">
+  <div class="banner-header banner2" data-aos="fade-down">
     <div class="banner-dott1">
       <div class="header">
         <div class="container-fluid">
@@ -108,13 +108,36 @@
                 <span class="icon-bar"></span>
               </button>
               <div class="w3_navigation_pos">
-                <h1><a href="index.html">Food Recipe</a></h1>
+                <h1><a href="home.html">Food Recipe</a></h1>
               </div>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
               <nav>
                 <ul class="nav navbar-nav">
                   <li><a href="/users/home">Home</a></li>
+
+                  <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="{% url 'viewprofile' %}">View Profile</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="{% url 'editprofile' %}">Edit Profile</a></li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'services' %}"><b>Services</b></a>
+                  </li>
+
+                  <!-- Contact Us link -->
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'contactus' %}"><b>Contact Us</b></a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'gallery' %}"><b>Gallery</b></a>
+                  </li>
                   <!-- <li><a href="about.html">About Us</a></li>
                   <li><a href="services.html">Our Services</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
@@ -129,26 +152,28 @@
                       ></a>
                       <ul class="dropdown-menu">
                         <li><a href="signup.html">sign up / sign in </a></li>-->
-                      
-                    </ul> 
-                  <!-- </li> -->
-                  <!-- <li class="active"><a href="contact.html">Contact</a></li> -->
-                 <li style="width: max-content;">
-                            <a id="google_translate_element"></a>
-                            <script src="{% static 'js_files/translate.js' %}"></script>
-                
-                            <script type="text/javascript">
-                                function googleTranslateElementInit() {
-                                    new google.translate.TranslateElement(
-                                        {pageLanguage: 'en'},
-                                        'google_translate_element'
-                                    );
-                                }
-                            </script>
-                
-                            <script type="text/javascript" src= "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                            </script>
-                  </li>
+
+                </ul>
+
+                <!-- </li> -->
+                <!-- <li class="active"><a href="contact.html">Contact</a></li> -->
+                <li style="width: max-content;">
+                  <a id="google_translate_element"></a>
+                  <script src="{% static 'js_files/translate.js' %}"></script>
+
+                  <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                      new google.translate.TranslateElement(
+                        { pageLanguage: 'en' },
+                        'google_translate_element'
+                      );
+                    }
+                  </script>
+
+                  <script type="text/javascript"
+                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+                </li>
                 </ul>
               </nav>
             </div>
@@ -157,10 +182,10 @@
       </div>
     </div>
   </div>
-  
+
   <a href="#" id="scrollDownButton">
     <div class="circle-background">
-        <img src="{% static 'images/bottomButton.webp' %}" alt="Scroll Down">
+      <img src="{% static 'images/bottomButton.webp' %}" alt="Scroll Down">
     </div>
   </a>
 
@@ -169,34 +194,37 @@
     <div class="container" data-aos="fade-right" data-aos-delay="10">
       <h2 class="heading">Contact <span>Us</span></h2>
       <p class="heading">Get In Touch</p>
-      
+
 
       <div class="con">
         <div class="contact-agileinfo">
           <div class="col-md-7 contact-right">
             {% if submission_successful %}
-                        <div class="alert alert-success">
-                            <strong>Success!</strong> Your message has been successfully submitted.
-                        </div>
+            <div class="alert alert-success">
+              <strong>Success!</strong> Your message has been successfully submitted.
+            </div>
             {% endif %}
-            <form method="POST" aria-label="contact us form">
+            <form name="submit-to-google-sheet" method="POST" aria-label="contact us form">
               {% csrf_token %}
               <label for="name" class="sr-only">Enter your Name: </label>
               <input type="text" name="name" id="name" placeholder="Name" required aria-required="true" />
-              
+
               <label for="email" class="sr-only">Enter your E-mail: </label>
-              <input type="email" class="email" name="email" id="email" placeholder="Email" required aria-required="true" />
-              
+              <input type="email" class="email" name="email" id="email" placeholder="Email" required
+                aria-required="true" />
+
               <label for="phone" class="sr-only">Enter your Phone Number: </label>
-              <input type="tel" name="phone" id="phone" pattern="91[0-9]{10}" placeholder="Phone" required aria-required="true" />
-              
+              <input type="tel" name="phone" id="phone" pattern="91[0-9]{10}" placeholder="Phone" required
+                aria-required="true" />
+
               <label for="message" class="sr-only">Enter your Message: </label>
               <textarea name="message" id="message" placeholder="Message" required aria-required="true">
               </textarea>
-              
+
               <label for="submit" class="sr-only">Submit this Form</label>
               <input type="submit" name="submit" id="submit" value="SUBMIT" />
             </form>
+            <span id="msg"></span>
           </div>
           <address class="col-md-5 contact-left">
             <div class="address">
@@ -224,7 +252,7 @@
           <div class="clearfix"></div>
         </div>
       </div>
-      </div>
+    </div>
   </div>
   <div class="agileits-w3layouts-map">
     <iframe
@@ -379,11 +407,11 @@
     });
   </script>
 
-  <script src="{% static 'js/aos.js' %}"> 
+  <script src="{% static 'js/aos.js' %}">
   </script>
   <script>
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       mirror: true,
     });
   </script>
@@ -395,6 +423,25 @@
     });
   </script>
   <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_lbUucI2zT5X47joMmFRsiX3UORVxAhk-Ee2KcMxZnQKATm8cJmtol8Uxs5G0ZPigPg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "message sent sucessfully"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
